@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuniX PetShop — Premium Pet Food</title>
+  <meta name="description" content="LuniX PetShop premium landing page." />
+  <link rel="preload" as="video" href="assets/videos/day-exterior-01.mp4" type="video/mp4">
+  <link rel="preload" as="video" href="assets/videos/night-exterior-01.mp4" type="video/mp4">
+  <link rel="preload" as="image" href="assets/images/bg-sweet-day-interior.webp">
+  <link rel="preload" as="image" href="assets/images/bg-moon-night-interior.webp">
+  <link rel="preload" as="image" href="assets/images/logo-big.webp">
+  <link rel="preload" as="image" href="assets/images/logo-nav-simple.webp">
+  <link rel="preload" as="image" href="assets/images/hero-01.webp">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-day">
+  <div class="preloader" id="preloader">
+    <div class="preloader__orb"></div><div class="preloader__orb preloader__orb--two"></div>
+    <div class="preloader__card">
+      <img src="assets/images/logo-big.webp" alt="LuniX PetShop" />
+      <p>LuniX System Gateway</p>
+      <h1>Loading LuniX PetShop...</h1>
+      <span id="loadingStatus">Preparing assets...</span>
+      <div class="preloader__bar"><i id="loadingFill"></i></div>
+      <small><b id="loadingPercent">0%</b><em>Full asset preload</em></small>
+    </div>
+  </div>
+
+  <div class="cinema-gate" aria-hidden="true"></div>
+
+  <nav class="side-nav" aria-label="Floor navigation">
+    <a class="side-nav__brand" href="#welcome" data-go="welcome"><img src="assets/images/logo-nav-simple.webp" alt="LuniX icon"><span><strong>LUNIX</strong><small>PetShop</small></span></a>
+    <div class="side-nav__floors">
+      <a class="side-nav__item is-active" href="#welcome" data-go="welcome"><span>L1</span><small>Welcome</small></a>
+      <a class="side-nav__item" href="#showcase" data-go="showcase"><span>L2</span><small>Showcase</small></a>
+      <a class="side-nav__item" href="#support" data-go="support"><span>L3</span><small>Support</small></a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme"><span id="themeIcon">☀</span><b id="themeLabel">Day</b></button>
+  </nav>
+
+  <main class="floor-world">
+    <section class="floor floor-welcome is-active is-current" id="welcome" data-floor="welcome">
+      <div class="video-bg" aria-hidden="true">
+        <video id="dayVideo" class="video-bg__item is-showing" src="assets/videos/day-exterior-01.mp4" autoplay muted playsinline loop preload="auto"></video>
+        <video id="nightVideo" class="video-bg__item" src="assets/videos/night-exterior-01.mp4" autoplay muted playsinline loop preload="auto"></video>
+        <div class="video-bg__wash"></div>
+      </div>
+      <div class="welcome-mini">
+        <article class="welcome-card">
+          <img src="assets/images/logo-big.webp" alt="LuniX PetShop logo">
+          <p>Welcome</p>
+          <h1>LUNIX PetShop</h1>
+          <div><span>Open Daily</span><strong>09.00 — 21.00</strong></div>
+          <a href="#showcase" data-go="showcase">Enter Shop</a>
+        </article>
+      </div>
+      <a class="floor-scroll" href="#showcase" data-go="showcase"><span>Enter Lt 2</span><i></i></a>
+    </section>
+
+    <section class="floor floor-showcase" id="showcase" data-floor="showcase">
+      <div class="floor-bg floor-bg--interior" aria-hidden="true"><div class="floor-bg__layer floor-bg__layer--day"></div><div class="floor-bg__layer floor-bg__layer--night"></div><div class="floor-bg__wash"></div></div>
+      <div class="showcase-layout">
+        <div class="hero-stage" id="visualArea">
+          <div class="hero-stage__glow"></div><div class="hero-stage__spotlight"></div>
+          <div class="ambient-card ambient-card--one"><small>Power-Up</small><strong id="ambientBadgeA">Balanced Nutrition</strong></div>
+          <div class="ambient-card ambient-card--two"><small>Highlight</small><strong id="ambientBadgeB">Soft Fur Care</strong></div>
+          <button class="formula-arrow formula-arrow--left" id="prevHero" type="button" aria-label="Previous formula"><span>‹</span><small>Prev</small></button>
+          <div class="hero-figure" id="heroFigure"><img id="heroImage" src="assets/images/hero-01.webp" alt="LuniX catfood hero"><span class="hero-figure__platform"></span><span class="hero-figure__shadow"></span></div>
+          <button class="formula-arrow formula-arrow--right" id="nextHero" type="button" aria-label="Next formula"><small>Next</small><span>›</span></button>
+        </div>
+        <article class="product-panel" id="infoPanel">
+          <div class="product-panel__topline"><span id="heroNumber">SHOWCASE 01 / 04</span><span id="heroRarity">Premium</span></div>
+          <h2 id="productName">LOB Petfood</h2>
+          <p id="productSubtitle">Daily Balance Formula</p>
+          <p id="productDescription">Nutrisi seimbang untuk mendukung energi, nafsu makan, dan rutinitas makan harian si kecil.</p>
+          <div class="tags" id="tags"></div><div class="stats" id="stats"></div><div class="benefits" id="benefits"></div>
+          <div class="purchase-panel"><div class="price-tag"><span>Starting From</span><strong id="productPrice">Rp 89.000</strong></div><div class="purchase-panel__actions"><a class="preorder-btn" href="#support" data-go="support">Pre-order</a><button class="detail-btn" type="button" id="detailButton">Detail</button></div></div>
+          <div class="hero-dots" id="heroDots"></div>
+        </article>
+      </div>
+      <a class="floor-scroll" href="#support" data-go="support"><span>Go to Lt 3</span><i></i></a>
+    </section>
+
+    <section class="floor floor-support" id="support" data-floor="support">
+      <div class="support-bg" aria-hidden="true"><span class="paw paw--one">🐾</span><span class="paw paw--two">🐾</span><span class="paw paw--three">🐾</span></div>
+      <div class="support-layout">
+        <div class="section-heading"><p>Support Collection</p><h2>Other essentials for your companion</h2><span>Produk pendukung untuk kebutuhan harian kucing, mulai dari wet food, snack, cat milk, daily care, vitamin, hingga cat litter.</span></div>
+        <div class="support-grid">
+          <article><span>🥫</span><h3>Wet Food</h3><p>Soft meal companion untuk variasi makan yang lebih menggoda.</p></article><article><span>🍪</span><h3>Snack</h3><p>Reward treats untuk momen bermain, latihan, dan bonding.</p></article><article><span>🥛</span><h3>Cat Milk</h3><p>Gentle daily support dengan rasa lembut dan cozy.</p></article><article><span>✨</span><h3>Daily Care</h3><p>Support formula untuk rutinitas sehat dan happy mood.</p></article><article><span>🧴</span><h3>Vitamin</h3><p>Daily support untuk wellness dan daya tahan tubuh.</p></article><article><span>🧺</span><h3>Cat Litter</h3><p>Pasir kucing pilihan untuk area yang lebih nyaman.</p></article>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-main"><img src="assets/images/logo-big.webp" alt="LuniX PetShop logo"><div><p>Contact Us</p><h2>Visit LUNIX PetShop</h2><span>Untuk pre-order, katalog, atau kerja sama promosi web premium, hubungi LUNIX PetShop.</span></div></article>
+          <article><span>📍</span><h3>Location</h3><p>Moonpaw Garden No. 07, LUNIX District</p></article><article><span>📱</span><h3>WhatsApp</h3><p>08xx-xxxx-xxxx</p></article><article><span>📷</span><h3>Instagram</h3><p>@lunix.petshop</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="music-btn" id="musicToggle" type="button" aria-label="Toggle background music"><span id="musicIcon">♪</span><b id="musicText">Theme</b></button>
+  <audio id="bgm" src="assets/audio/lunix-theme.mp3" loop preload="auto"></audio>
+  <audio id="doorSfx" src="assets/sfx/store-door-sfx.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
