@@ -58,3 +58,23 @@ body.theme-night{--text:#fff4ff;--muted:rgba(255,244,255,.74);--panel:rgba(24,18
   .floor-world,.floor,.welcome-mini,.showcase-layout,.support-layout{height:100dvh}
   @media(max-width:1060px){.floor-world,.floor,.welcome-mini,.showcase-layout,.support-layout{height:auto;min-height:100dvh}}
 }
+
+@media (min-width:1061px) {
+  .formula-arrow--left {
+    left: calc(var(--nav-w) + 42px);
+  }
+
+  .formula-arrow--right {
+    right: 24px;
+  }
+}
+
+@media (min-width:1061px) and (max-height:820px) {
+  .formula-arrow--left {
+    left: calc(var(--nav-w) + 32px);
+  }
+
+  .formula-arrow--right {
+    right: 16px;
+  }
+}
