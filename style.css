@@ -14,3 +14,47 @@ body.theme-night{--text:#fff4ff;--muted:rgba(255,244,255,.74);--panel:rgba(24,18
 .floor-scroll{position:absolute;left:50%;bottom:18px;z-index:8;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 14px;border:1px solid rgba(215,173,87,.44);border-radius:999px;background:rgba(255,255,255,.48);box-shadow:0 14px 34px rgba(84,41,103,.12);backdrop-filter:blur(12px);font-size:.72rem;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.floor-scroll i{width:22px;height:30px;border-radius:999px;border:1px solid rgba(215,173,87,.5);position:relative}.floor-scroll i:before{content:"";position:absolute;top:7px;left:50%;width:4px;height:4px;border-radius:50%;background:var(--gold);transform:translateX(-50%);animation:scrollDot 1.4s ease-in-out infinite}.music-btn{position:fixed;right:22px;bottom:22px;z-index:100;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:999px;font-weight:950}.music-btn.is-playing{color:#fff;background:linear-gradient(135deg,var(--purple),var(--gold))}
 @keyframes floatOrb{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.04)}}@keyframes scrollDot{0%{opacity:0;transform:translate(-50%,0)}35%{opacity:1}100%{opacity:0;transform:translate(-50%,10px)}}@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes welcomeReveal{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}@keyframes heroReveal{from{opacity:0;transform:translateY(28px) scale(1.03)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes panelReveal{from{opacity:0;transform:translateX(24px) scale(.98)}to{opacity:1;transform:translateX(0) scale(1)}}@keyframes supportReveal{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:1180px){.side-nav{left:50%;top:10px;width:min(860px,calc(100% - 16px));transform:translateX(-50%);grid-template-columns:auto 1fr auto;align-items:center;gap:10px;border-radius:999px;padding:8px}.side-nav__brand{grid-template-columns:42px auto}.side-nav__brand img{width:42px;height:42px}.side-nav__floors{display:flex;justify-content:center;gap:8px}.side-nav__item{grid-template-columns:34px;min-width:46px;padding:5px}.side-nav__item small{display:none}.side-nav__item span{height:34px}.theme-toggle{width:auto;min-height:42px}.welcome-mini{justify-content:center;padding-left:0;padding-top:74px}.showcase-layout,.support-layout{padding-top:74px}}@media(max-width:1060px){html,body{overflow:auto}.floor-world{height:auto;overflow:visible}.floor{position:relative;height:auto;min-height:100vh;opacity:1;visibility:visible;pointer-events:auto}.showcase-layout{grid-template-columns:1fr;gap:0;width:min(100% - 24px,900px)}.hero-stage,.hero-figure{min-height:auto}.hero-figure{width:min(680px,100%)}.hero-figure img{max-width:min(92vw,620px);max-height:56vh;transform:translateY(34px) scale(1.02)}.hero-stage:hover .hero-figure img{transform:translateY(30px) scale(1.04)}.product-panel{width:min(720px,100%);margin:0 auto 54px}.ambient-card{display:none}.support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{grid-template-columns:1fr 1fr}.contact-main{grid-column:1/-1}}@media(max-width:760px){.side-nav{width:calc(100% - 16px)}.side-nav__brand small,.theme-toggle b{display:none}.side-nav__brand{grid-template-columns:42px}.welcome-mini,.showcase-layout,.support-layout{width:min(100% - 20px,1240px);height:auto;min-height:100vh;padding-top:84px;padding-bottom:72px}.welcome-card{width:min(330px,100%);padding:22px;border-radius:26px}.welcome-card img{width:min(210px,90%)}.welcome-card h1{font-size:clamp(2.5rem,14vw,3.4rem)}.benefits,.purchase-panel,.support-grid,.contact-grid,.contact-main{grid-template-columns:1fr}.hero-figure img{max-width:106%;max-height:50vh;transform:translateY(24px) scale(1.01)}.hero-stage:hover .hero-figure img{transform:translateY(22px) scale(1.025)}.product-panel{padding:22px;border-radius:26px}.product-panel:before,.floor-scroll{display:none}.purchase-panel__actions{justify-content:stretch}.purchase-panel__actions a,.purchase-panel__actions button{flex:1}.contact-main{text-align:center}.contact-main img{margin:0 auto}.music-btn{right:14px;bottom:14px}}
+
+
+@media (min-width:1061px) and (max-height:820px){
+  .showcase-layout{width:min(1180px,calc(100% - 28px));grid-template-columns:minmax(0,1fr) minmax(340px,.68fr);gap:22px}
+  .hero-stage,.hero-figure{min-height:100vh}
+  .hero-figure img{max-height:88vh;max-width:min(620px,96%);transform:translateY(34px) scale(.98)}
+  .hero-stage:hover .hero-figure img{transform:translateY(30px) scale(1.01)}
+  .product-panel{width:min(380px,100%);padding:18px;border-radius:26px}
+  .product-panel:before{inset:9px;border-radius:19px}
+  .product-panel__topline{font-size:.66rem}
+  .product-panel h2{margin-top:12px;font-size:clamp(2.2rem,4vw,3.1rem)}
+  .product-panel>p:nth-of-type(1){font-size:.95rem}
+  .product-panel>p:nth-of-type(2){margin:10px 0 12px;line-height:1.55;font-size:.88rem}
+  .tags{gap:6px;margin-bottom:12px}
+  .tag{min-height:26px;padding:0 9px;font-size:.68rem}
+  .stats{gap:7px;margin-bottom:12px}
+  .stat{gap:4px}
+  .stat__header{font-size:.76rem}
+  .stat__track{height:7px}
+  .benefits{gap:7px;margin-bottom:12px}
+  .benefit{min-height:70px;padding:9px;border-radius:15px}
+  .benefit__icon{margin-bottom:4px;font-size:.95rem}
+  .benefit h3{font-size:.72rem}
+  .benefit p{font-size:.64rem;line-height:1.28}
+  .purchase-panel{padding:11px;border-radius:18px}
+  .price-tag strong{font-size:1.55rem}
+  .preorder-btn,.detail-btn{min-height:34px;padding:0 11px;font-size:.78rem}
+  .ambient-card{min-width:160px;max-width:190px;padding:10px 12px}
+  .ambient-card strong{font-size:.82rem}
+  .formula-arrow{min-width:76px;min-height:46px}
+  .floor-scroll{bottom:10px;min-height:36px}
+  .side-nav{transform:translateY(-50%) scale(.92);transform-origin:left center}
+  .music-btn{min-height:42px;padding:0 13px}
+}
+@media (min-width:1061px) and (max-height:740px){
+  .product-panel{transform:scale(.92);transform-origin:center right}
+  .hero-figure img{max-height:84vh;transform:translateY(26px) scale(.92)}
+  .hero-stage:hover .hero-figure img{transform:translateY(24px) scale(.95)}
+  .floor-scroll{display:none}
+}
+@supports (height:100dvh){
+  .floor-world,.floor,.welcome-mini,.showcase-layout,.support-layout{height:100dvh}
+  @media(max-width:1060px){.floor-world,.floor,.welcome-mini,.showcase-layout,.support-layout{height:auto;min-height:100dvh}}
+}
